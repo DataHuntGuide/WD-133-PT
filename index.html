@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a952ddb2c4dff96865b5efe172556fca {
+                #map_b9e5179d4104942ea5e7e2a41b29fad9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -41,7 +41,7 @@
 <body>
     
     
-            <div class="folium-map" id="map_a952ddb2c4dff96865b5efe172556fca" ></div>
+            <div class="folium-map" id="map_b9e5179d4104942ea5e7e2a41b29fad9" ></div>
         
     
             
@@ -60,42 +60,42 @@ Nn+Zz0TxSz65yGZbvETRD01lU6VSAqkY7FOI7YxgXnG8BxqxjVN4HK4fjoAjP0a/CVjA4rbCgljqV
 <script>
     
     
-            var map_a952ddb2c4dff96865b5efe172556fca = L.map(
-                "map_a952ddb2c4dff96865b5efe172556fca",
+            var map_b9e5179d4104942ea5e7e2a41b29fad9 = L.map(
+                "map_b9e5179d4104942ea5e7e2a41b29fad9",
                 {
-                    center: [48.0, -118.0],
+                    center: [47.74, -118.32],
                     crs: L.CRS.EPSG3857,
-                    zoom: 9,
+                    zoom: 11,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_a952ddb2c4dff96865b5efe172556fca);
+            L.control.scale().addTo(map_b9e5179d4104942ea5e7e2a41b29fad9);
 
             
 
         
     
-            var tile_layer_d37d547262e4c303a91382f5b82b3280 = L.tileLayer(
+            var tile_layer_1b628afee78e7c52f84a88d76da283a1 = L.tileLayer(
                 "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; OpenTopoMap (CC-BY-SA)", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_a952ddb2c4dff96865b5efe172556fca);
+            ).addTo(map_b9e5179d4104942ea5e7e2a41b29fad9);
         
     
-            var heat_map_36e166991fc44d0b6c9196341518d4e2 = L.heatLayer(
-                [[48.90303, -117.90596], [48.90997, -117.9241], [48.90838, -117.91508], [48.90223, -117.9042], [48.91199, -117.92602], [48.90341, -117.89775], [48.9084, -117.90314], [48.90299, -118.13627], [48.90912, -117.931], [48.891, -117.97974], [48.90246, -117.96699], [48.90246, -117.96699], [48.90955, -117.94516], [48.91645, -117.93897], [48.90246, -117.96699], [48.78766, -117.28065], [48.29324, -117.22197], [48.28334, -117.22249], [48.32347, -117.09703], [48.30858, -117.09576], [48.30045, -117.10279], [48.31762, -117.0986], [48.86289, -117.35094], [48.86105, -117.34681], [48.85507, -117.35685], [48.85375, -117.35895], [48.7838889, -117.2786111], [48.98734, -117.31637], [48.34515, -117.99926], [48.347, -118.00328], [48.34438, -118.00577], [48.12568, -118.06706], [48.42805, -117.93761], [48.42512, -117.95251], [48.44842, -117.94475], [48.43387, -117.9357], [48.41581, -117.93087], [48.40737, -117.97537], [48.40713, -117.9657], [48.31192, -117.97498], [48.48768, -118.10321], [48.5068, -118.1546], [48.1266, -117.84787], [48.13791, -117.83612], [48.13169, -117.84697], [48.00892, -117.93655], [47.75659, -118.28831], [47.73353, -118.36509], [47.73253, -118.3735], [47.72841, -118.38107], [47.75484, -118.28182], [47.75455, -118.27183], [47.72975, -118.36616], [47.74651, -118.2827], [47.73715, -118.36091]],
+            var heat_map_1df1611d5381a07f099ec3a6087a00d7 = L.heatLayer(
+                [[47.75659, -118.28831], [47.73353, -118.36509], [47.73253, -118.3735], [47.72841, -118.38107], [47.75484, -118.28182], [47.75455, -118.27183], [47.72975, -118.36616], [47.74651, -118.2827], [47.73715, -118.36091]],
                 {"blur": 15, "maxZoom": 18, "minOpacity": 0.3, "radius": 30}
-            ).addTo(map_a952ddb2c4dff96865b5efe172556fca);
+            ).addTo(map_b9e5179d4104942ea5e7e2a41b29fad9);
         
     
-            var mouse_position_073242eda95b44b8e36186c07bb94453 = new L.Control.MousePosition(
+            var mouse_position_89d6d8994f30eb723742f79bbc019137 = new L.Control.MousePosition(
                 {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "topright", "prefix": "Lat | Lon", "separator": " | "}
             );
-            mouse_position_073242eda95b44b8e36186c07bb94453.options["latFormatter"] =
+            mouse_position_89d6d8994f30eb723742f79bbc019137.options["latFormatter"] =
                 function(num) {return L.Util.formatNum(num, 5);};
-            mouse_position_073242eda95b44b8e36186c07bb94453.options["lngFormatter"] =
+            mouse_position_89d6d8994f30eb723742f79bbc019137.options["lngFormatter"] =
                 function(num) {return L.Util.formatNum(num, 5);};
-            map_a952ddb2c4dff96865b5efe172556fca.addControl(mouse_position_073242eda95b44b8e36186c07bb94453);
+            map_b9e5179d4104942ea5e7e2a41b29fad9.addControl(mouse_position_89d6d8994f30eb723742f79bbc019137);
         
 </script>
 </html>
