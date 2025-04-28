@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b9e5179d4104942ea5e7e2a41b29fad9 {
+                #map_43a08dbe1ffb0fb1009daf03041f0e16 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,11 @@
             </style>
         
     <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@master/folium/templates/leaflet_heat.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_b9e5179d4104942ea5e7e2a41b29fad9" ></div>
+            <div class="folium-map" id="map_43a08dbe1ffb0fb1009daf03041f0e16" ></div>
         
     
             
@@ -60,8 +58,8 @@ Nn+Zz0TxSz65yGZbvETRD01lU6VSAqkY7FOI7YxgXnG8BxqxjVN4HK4fjoAjP0a/CVjA4rbCgljqV
 <script>
     
     
-            var map_b9e5179d4104942ea5e7e2a41b29fad9 = L.map(
-                "map_b9e5179d4104942ea5e7e2a41b29fad9",
+            var map_43a08dbe1ffb0fb1009daf03041f0e16 = L.map(
+                "map_43a08dbe1ffb0fb1009daf03041f0e16",
                 {
                     center: [47.74, -118.32],
                     crs: L.CRS.EPSG3857,
@@ -70,32 +68,33 @@ Nn+Zz0TxSz65yGZbvETRD01lU6VSAqkY7FOI7YxgXnG8BxqxjVN4HK4fjoAjP0a/CVjA4rbCgljqV
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_b9e5179d4104942ea5e7e2a41b29fad9);
+            L.control.scale().addTo(map_43a08dbe1ffb0fb1009daf03041f0e16);
 
             
 
         
     
-            var tile_layer_1b628afee78e7c52f84a88d76da283a1 = L.tileLayer(
+            var tile_layer_2a6c9e8b53189df847632e18c9453e7a = L.tileLayer(
                 "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; OpenTopoMap (CC-BY-SA)", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_b9e5179d4104942ea5e7e2a41b29fad9);
+            ).addTo(map_43a08dbe1ffb0fb1009daf03041f0e16);
         
     
-            var heat_map_1df1611d5381a07f099ec3a6087a00d7 = L.heatLayer(
+            var heat_map_4180e8f9f39e130bd43f651852fe2b98 = L.heatLayer(
                 [[47.75659, -118.28831], [47.73353, -118.36509], [47.73253, -118.3735], [47.72841, -118.38107], [47.75484, -118.28182], [47.75455, -118.27183], [47.72975, -118.36616], [47.74651, -118.2827], [47.73715, -118.36091]],
                 {"blur": 15, "maxZoom": 18, "minOpacity": 0.3, "radius": 30}
-            ).addTo(map_b9e5179d4104942ea5e7e2a41b29fad9);
+            ).addTo(map_43a08dbe1ffb0fb1009daf03041f0e16);
         
     
-            var mouse_position_89d6d8994f30eb723742f79bbc019137 = new L.Control.MousePosition(
-                {"emptyString": "Unavailable", "lngFirst": false, "numDigits": 5, "position": "topright", "prefix": "Lat | Lon", "separator": " | "}
-            );
-            mouse_position_89d6d8994f30eb723742f79bbc019137.options["latFormatter"] =
-                function(num) {return L.Util.formatNum(num, 5);};
-            mouse_position_89d6d8994f30eb723742f79bbc019137.options["lngFormatter"] =
-                function(num) {return L.Util.formatNum(num, 5);};
-            map_b9e5179d4104942ea5e7e2a41b29fad9.addControl(mouse_position_89d6d8994f30eb723742f79bbc019137);
-        
+                var lat_lng_popup_9abd0138bbe878e4bad309ba944ecf14 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_9abd0138bbe878e4bad309ba944ecf14
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_43a08dbe1ffb0fb1009daf03041f0e16);
+                    }
+                map_43a08dbe1ffb0fb1009daf03041f0e16.on('click', latLngPop);
+            
 </script>
 </html>
